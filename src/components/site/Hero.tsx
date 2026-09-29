@@ -32,7 +32,13 @@ export function Hero() {
             />
           </div>
 
-          <h1 className="text-on-green pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 px-4 text-center">
+          <h1
+            className="text-on-green pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 px-4 text-center"
+            style={{
+              textShadow:
+                "0 2px 6px rgba(0,0,0,0.35), 0 4px 24px rgba(0,0,0,0.45), 0 0 60px rgba(13,64,57,0.5)",
+            }}
+          >
             <span
               data-visible={on}
               className="reveal-mask font-display block text-[13vw] leading-[0.86] tracking-tight drop-shadow-[0_2px_40px_rgba(13,64,57,0.45)] md:text-[8.5vw]"
