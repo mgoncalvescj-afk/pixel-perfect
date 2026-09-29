@@ -1,7 +1,10 @@
 import { useEffect, useRef } from "react";
 import { Reveal } from "./reveal";
 
-function ScrollVideo() {
+function ScrollVideo({
+  src = "/videos/mebel-design.mp4",
+  label = "Processo de design de mobiliário Mébel",
+}: { src?: string; label?: string }) {
   const ref = useRef<HTMLVideoElement>(null);
   useEffect(() => {
     const v = ref.current;
@@ -19,12 +22,12 @@ function ScrollVideo() {
   return (
     <video
       ref={ref}
-      src="/videos/mebel-design.mp4"
+      src={src}
       muted
       loop
       playsInline
       preload="auto"
-      aria-label="Processo de design de mobiliário Mébel"
+      aria-label={label}
       className="aspect-video w-full object-cover"
     />
   );
@@ -296,12 +299,22 @@ export function Manifesto() {
             Feito para durar.
           </h3>
         </Reveal>
-        <Reveal delay={180}>
-          <p className="text-on-green-muted mt-8 max-w-md text-[15px] leading-relaxed md:ml-auto">
-            Porque o mobiliário certo não é apenas aquele que cabe num espaço. É aquele que pertence
-            a ele.
-          </p>
-        </Reveal>
+        <div className="mt-10 grid items-center gap-10 md:mt-14 md:grid-cols-12">
+          <Reveal className="md:col-span-7" delay={120}>
+            <div className="border-hairline-green overflow-hidden rounded-[22px] border">
+              <ScrollVideo
+                src="/videos/mebel-manifesto.mp4"
+                label="Mobiliário Mébel pensado à medida"
+              />
+            </div>
+          </Reveal>
+          <Reveal className="md:col-span-4 md:col-start-9" delay={200}>
+            <p className="text-on-green-muted max-w-sm text-[15px] leading-relaxed">
+              Porque o mobiliário certo não é apenas aquele que cabe num espaço. É aquele que
+              pertence a ele.
+            </p>
+          </Reveal>
+        </div>
       </div>
     </section>
   );
