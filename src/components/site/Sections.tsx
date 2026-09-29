@@ -265,7 +265,7 @@ export function ProjectoDestaque() {
             </a>
           </Reveal>
 
-          <Reveal className="lg:col-span-8 lg:col-start-5" delay={120}>
+          <Reveal className="lg:col-span-6 lg:col-start-6" delay={120}>
             <div className="media-zoom rounded-[22px]">
               <img
                 src={projectoT5}
