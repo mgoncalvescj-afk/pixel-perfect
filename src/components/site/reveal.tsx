@@ -46,9 +46,15 @@ export function Reveal({ children, className = "", delay = 0, as, mask = false }
       ref={ref}
       data-visible={visible ? "true" : "false"}
       style={{ transitionDelay: `${delay}ms` }}
-      className={`${mask ? "reveal-mask" : "reveal"} ${className}`}
+      className={`${mask ? "reveal-mask-host" : "reveal"} ${className}`}
     >
-      {children}
+      {mask ? (
+        <div className="reveal-mask" data-visible={visible ? "true" : "false"} style={{ transitionDelay: `${delay}ms` }}>
+          {children}
+        </div>
+      ) : (
+        children
+      )}
     </Tag>
   );
 }
