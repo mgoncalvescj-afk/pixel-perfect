@@ -1,4 +1,34 @@
+import { useEffect, useRef } from "react";
 import { Reveal } from "./reveal";
+
+function ScrollVideo() {
+  const ref = useRef<HTMLVideoElement>(null);
+  useEffect(() => {
+    const v = ref.current;
+    if (!v) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) v.play().catch(() => {});
+        else v.pause();
+      },
+      { threshold: 0.25, rootMargin: "200px 0px" },
+    );
+    io.observe(v);
+    return () => io.disconnect();
+  }, []);
+  return (
+    <video
+      ref={ref}
+      src="/videos/mebel-design.mp4"
+      muted
+      loop
+      playsInline
+      preload="auto"
+      aria-label="Processo de design de mobiliário Mébel"
+      className="aspect-video w-full object-cover"
+    />
+  );
+}
 import cozinhas from "@/assets/ambiente-cozinhas.jpg";
 import closets from "@/assets/ambiente-closets.jpg";
 import salas from "@/assets/ambiente-salas.jpg";
