@@ -279,22 +279,6 @@ export function ProjectoDestaque() {
             </div>
           </Reveal>
 
-          <Reveal className="hidden lg:col-span-2 lg:block" delay={220}>
-            <div className="media-zoom rounded-[22px]">
-              <img
-                src={projectoDetalhe}
-                loading="lazy"
-                width={704}
-                height={1008}
-                alt="Pormenor de gaveta em carvalho com bancada em pedra"
-                className="aspect-[2/3] w-full object-cover"
-              />
-            </div>
-            <div className="text-ink-muted mt-4 flex items-center justify-end gap-3 text-sm">
-              <span aria-hidden="true">←</span>
-              <span aria-hidden="true">→</span>
-            </div>
-          </Reveal>
         </div>
       </div>
     </section>
