@@ -44,7 +44,7 @@ import galeriaOffice from "@/assets/galeria-office.jpg";
 export function Intro() {
   return (
     <section id="sobre" className="bg-ivory">
-      <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-36">
+      <div className="mx-auto max-w-[1400px] px-6 pt-16 pb-24 md:px-10 md:pt-24 md:pb-32">
         <div className="grid gap-10 md:grid-cols-12">
           <Reveal className="md:col-span-7" mask>
             <h2 className="font-display text-4xl leading-[1.08] tracking-tight sm:text-5xl md:text-[3.75rem]">
