@@ -8,7 +8,7 @@ function ScrollVideo() {
     if (!v) return;
     const io = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) v.play().catch(() => {});
+        if (entry?.isIntersecting) v.play().catch(() => {});
         else v.pause();
       },
       { threshold: 0.25, rootMargin: "200px 0px" },
