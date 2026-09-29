@@ -288,7 +288,7 @@ export function Manifesto() {
   return (
     <section className="bg-green relative overflow-hidden">
       <div className="architectural-lines pointer-events-none absolute inset-0 opacity-50" />
-      <div className="text-on-green relative mx-auto max-w-[1400px] px-6 py-32 md:px-10 md:py-48">
+      <div className="text-on-green relative mx-auto max-w-[1400px] px-6 py-20 md:px-10 md:py-28">
         <Reveal mask>
           <h3 className="font-display max-w-3xl text-4xl leading-[1.05] tracking-tight sm:text-5xl md:text-[4rem]">
             Pensado à medida.
@@ -297,7 +297,7 @@ export function Manifesto() {
           </h3>
         </Reveal>
         <Reveal delay={180}>
-          <p className="text-on-green-muted mt-12 max-w-md text-[15px] leading-relaxed md:ml-auto">
+          <p className="text-on-green-muted mt-8 max-w-md text-[15px] leading-relaxed md:ml-auto">
             Porque o mobiliário certo não é apenas aquele que cabe num espaço. É aquele que pertence
             a ele.
           </p>
