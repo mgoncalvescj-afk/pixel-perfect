@@ -36,7 +36,6 @@ import quartos from "@/assets/ambiente-quartos.jpg";
 import homeoffice from "@/assets/ambiente-homeoffice.jpg";
 import escritorios from "@/assets/ambiente-escritorios.jpg";
 import projectoT5 from "@/assets/projecto-moradia-t5.jpg";
-import projectoDetalhe from "@/assets/projecto-detalhe.jpg";
 import galeriaResidencia from "@/assets/galeria-residencia.jpg";
 import galeriaVestir from "@/assets/galeria-vestir.jpg";
 import galeriaOffice from "@/assets/galeria-office.jpg";
@@ -266,7 +265,7 @@ export function ProjectoDestaque() {
             </a>
           </Reveal>
 
-          <Reveal className="lg:col-span-6 lg:col-start-6" delay={120}>
+          <Reveal className="lg:col-span-8 lg:col-start-5" delay={120}>
             <div className="media-zoom rounded-[22px]">
               <img
                 src={projectoT5}
@@ -279,22 +278,6 @@ export function ProjectoDestaque() {
             </div>
           </Reveal>
 
-          <Reveal className="hidden lg:col-span-2 lg:block" delay={220}>
-            <div className="media-zoom rounded-[22px]">
-              <img
-                src={projectoDetalhe}
-                loading="lazy"
-                width={704}
-                height={1008}
-                alt="Pormenor de gaveta em carvalho com bancada em pedra"
-                className="aspect-[2/3] w-full object-cover"
-              />
-            </div>
-            <div className="text-ink-muted mt-4 flex items-center justify-end gap-3 text-sm">
-              <span aria-hidden="true">←</span>
-              <span aria-hidden="true">→</span>
-            </div>
-          </Reveal>
         </div>
       </div>
     </section>
