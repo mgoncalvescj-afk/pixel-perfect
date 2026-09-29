@@ -32,16 +32,16 @@ function ScrollVideo({
     />
   );
 }
-import cozinhas from "@/assets/ambiente-cozinhas.jpg";
-import closets from "@/assets/ambiente-closets.jpg";
-import salas from "@/assets/ambiente-salas.jpg";
-import quartos from "@/assets/ambiente-quartos.jpg";
-import homeoffice from "@/assets/ambiente-homeoffice.jpg";
-import escritorios from "@/assets/ambiente-escritorios.jpg";
-import projectoT5 from "@/assets/projecto-moradia-t5.jpg";
-import galeriaResidencia from "@/assets/galeria-residencia.jpg";
-import galeriaVestir from "@/assets/galeria-vestir.jpg";
-import galeriaOffice from "@/assets/galeria-office.jpg";
+import cozinhas from "@/assets/ambiente-cozinhas.webp";
+import closets from "@/assets/ambiente-closets.webp";
+import salas from "@/assets/ambiente-salas.webp";
+import quartos from "@/assets/ambiente-quartos.webp";
+import homeoffice from "@/assets/ambiente-homeoffice.webp";
+import escritorios from "@/assets/ambiente-escritorios.webp";
+import projectoT5 from "@/assets/projecto-moradia-t5.webp";
+import galeriaResidencia from "@/assets/galeria-residencia.webp";
+import galeriaVestir from "@/assets/galeria-vestir.webp";
+import galeriaOffice from "@/assets/galeria-office.webp";
 
 export function Intro() {
   return (

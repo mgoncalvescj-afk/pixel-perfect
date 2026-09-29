@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import heroImage from "@/assets/hero-interior.jpg";
+import heroImage from "@/assets/hero-interior.webp";
 
 export function Hero() {
   const [ready, setReady] = useState(false);
