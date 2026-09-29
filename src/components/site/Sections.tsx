@@ -49,6 +49,7 @@ export function Intro() {
       <div className="mx-auto max-w-[1400px] px-6 pt-10 pb-24 md:px-10 md:pt-14 md:pb-32">
         <div className="grid gap-10 md:grid-cols-12">
           <Reveal className="md:col-span-7" mask>
+            <p className="label-editorial text-ink-muted mb-6">Sobre nós</p>
             <h2 className="font-display text-4xl leading-[1.08] tracking-tight sm:text-5xl md:text-[3.75rem]">
               Mobiliário pensado
               <br />
@@ -293,7 +294,8 @@ export function Manifesto() {
       <div className="architectural-lines pointer-events-none absolute inset-0 opacity-50" />
       <div className="text-on-green relative mx-auto max-w-[1400px] px-6 pt-12 pb-20 md:px-10 md:pt-16 md:pb-28">
         <Reveal mask>
-          <h3 className="font-display max-w-3xl text-4xl leading-[1.05] tracking-tight sm:text-5xl md:text-[4rem]">
+          <p className="label-editorial text-on-green-muted mb-6">Manifesto</p>
+            <h3 className="font-display max-w-3xl text-4xl leading-[1.05] tracking-tight sm:text-5xl md:text-[4rem]">
             Pensado à medida.
             <br />
             Feito para durar.
@@ -334,7 +336,8 @@ export function Processo() {
     <section id="processo" className="bg-ivory">
       <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-36">
         <Reveal className="mb-16" mask>
-          <h3 className="font-display text-4xl leading-[1.05] tracking-tight sm:text-5xl">
+          <p className="label-editorial text-ink-muted mb-6">Processo</p>
+            <h3 className="font-display text-4xl leading-[1.05] tracking-tight sm:text-5xl">
             Do primeiro traço
             <br />à instalação.
           </h3>
@@ -373,7 +376,7 @@ export function Historia() {
       <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-36">
         <div className="grid gap-16 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
-            <p className="label-editorial text-ink-muted">Desde 2009.</p>
+            <p className="label-editorial text-ink-muted">A nossa história · Desde 2009</p>
             <p className="font-display mt-6 text-7xl leading-none tracking-tight md:text-8xl">
               17+
             </p>
@@ -467,7 +470,8 @@ export function FinalCta() {
     <section id="orcamento" className="bg-green">
       <div className="text-on-green mx-auto max-w-[1400px] px-6 py-28 md:px-10 md:py-40">
         <Reveal mask>
-          <h3 className="font-display max-w-3xl text-4xl leading-[1.05] tracking-tight sm:text-5xl md:text-[3.75rem]">
+          <p className="label-editorial text-on-green-muted mb-6">Orçamento</p>
+            <h3 className="font-display max-w-3xl text-4xl leading-[1.05] tracking-tight sm:text-5xl md:text-[3.75rem]">
             Vamos desenhar
             <br />o seu próximo espaço?
           </h3>
