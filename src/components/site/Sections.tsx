@@ -25,7 +25,23 @@ export function Intro() {
               você vive.
             </h2>
           </Reveal>
-          <Reveal className="md:col-span-4 md:col-start-9 md:pt-4" delay={160}>
+        </div>
+        <div className="mt-14 grid items-center gap-10 md:mt-20 md:grid-cols-12">
+          <Reveal className="md:col-span-7" delay={120}>
+            <div className="border-hairline overflow-hidden rounded-[22px] border">
+              <video
+                src="/videos/mebel-design.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                aria-label="Processo de design de mobiliário Mébel"
+                className="aspect-video w-full object-cover"
+              />
+            </div>
+          </Reveal>
+          <Reveal className="md:col-span-4 md:col-start-9" delay={200}>
             <p className="text-ink-muted max-w-sm text-[15px] leading-relaxed">
               Desenhamos, produzimos e instalamos mobiliário personalizado para cozinhas, quartos,
               closets, salas, escritórios e espaços comerciais.
