@@ -288,7 +288,7 @@ export function Manifesto() {
   return (
     <section className="bg-green relative overflow-hidden">
       <div className="architectural-lines pointer-events-none absolute inset-0 opacity-50" />
-      <div className="text-on-green relative mx-auto max-w-[1400px] px-6 py-20 md:px-10 md:py-28">
+      <div className="text-on-green relative mx-auto max-w-[1400px] px-6 pt-12 pb-20 md:px-10 md:pt-16 md:pb-28">
         <Reveal mask>
           <h3 className="font-display max-w-3xl text-4xl leading-[1.05] tracking-tight sm:text-5xl md:text-[4rem]">
             Pensado à medida.
