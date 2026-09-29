@@ -1,4 +1,34 @@
+import { useEffect, useRef } from "react";
 import { Reveal } from "./reveal";
+
+function ScrollVideo() {
+  const ref = useRef<HTMLVideoElement>(null);
+  useEffect(() => {
+    const v = ref.current;
+    if (!v) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry?.isIntersecting) v.play().catch(() => {});
+        else v.pause();
+      },
+      { threshold: 0.25, rootMargin: "200px 0px" },
+    );
+    io.observe(v);
+    return () => io.disconnect();
+  }, []);
+  return (
+    <video
+      ref={ref}
+      src="/videos/mebel-design.mp4"
+      muted
+      loop
+      playsInline
+      preload="auto"
+      aria-label="Processo de design de mobiliário Mébel"
+      className="aspect-video w-full object-cover"
+    />
+  );
+}
 import cozinhas from "@/assets/ambiente-cozinhas.jpg";
 import closets from "@/assets/ambiente-closets.jpg";
 import salas from "@/assets/ambiente-salas.jpg";
@@ -29,16 +59,7 @@ export function Intro() {
         <div className="mt-14 grid items-center gap-10 md:mt-20 md:grid-cols-12">
           <Reveal className="md:col-span-7" delay={120}>
             <div className="border-hairline overflow-hidden rounded-[22px] border">
-              <video
-                src="/videos/mebel-design.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                aria-label="Processo de design de mobiliário Mébel"
-                className="aspect-video w-full object-cover"
-              />
+              <ScrollVideo />
             </div>
           </Reveal>
           <Reveal className="md:col-span-4 md:col-start-9" delay={200}>
