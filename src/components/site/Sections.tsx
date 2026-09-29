@@ -120,6 +120,7 @@ export function Ambientes() {
                   <img
                     src={item.image}
                     loading="lazy"
+                decoding="async"
                     width={912}
                     height={1152}
                     alt={item.alt}
@@ -156,6 +157,7 @@ export function MaisAmbientes() {
                 <img
                   src={quartos}
                   loading="lazy"
+                decoding="async"
                   width={1408}
                   height={1008}
                   alt="Quarto com painel de madeira à medida e roupa de cama em linho"
@@ -184,6 +186,7 @@ export function MaisAmbientes() {
                   <img
                     src={homeoffice}
                     loading="lazy"
+                decoding="async"
                     width={912}
                     height={1008}
                     alt="Home office com secretária e estante em carvalho"
@@ -208,6 +211,7 @@ export function MaisAmbientes() {
                   <img
                     src={escritorios}
                     loading="lazy"
+                decoding="async"
                     width={912}
                     height={1008}
                     alt="Recepção de escritório com painel de madeira e balcão em pedra"
@@ -274,6 +278,7 @@ export function ProjectoDestaque() {
               <img
                 src={projectoT5}
                 loading="lazy"
+                decoding="async"
                 width={1504}
                 height={1008}
                 alt="Sala de estar da Moradia T5 em Talatona com móvel de TV lacado grafite e painel em nogueira"
@@ -420,6 +425,7 @@ export function Galeria() {
               <img
                 src={galeriaResidencia}
                 loading="lazy"
+                decoding="async"
                 width={735}
                 height={490}
                 alt="Sala de estar ampla com sofás claros e móvel em madeira na residência privada no Benfica"
@@ -435,6 +441,7 @@ export function Galeria() {
               <img
                 src={galeriaVestir}
                 loading="lazy"
+                decoding="async"
                 width={736}
                 height={981}
                 alt="Sala de estar com móvel de TV grafite e iluminação embutida no Apartamento Kilamba"
@@ -450,6 +457,7 @@ export function Galeria() {
               <img
                 src={galeriaOffice}
                 loading="lazy"
+                decoding="async"
                 width={474}
                 height={474}
                 alt="Escritório com secretária em carvalho e painel ripado em madeira"
