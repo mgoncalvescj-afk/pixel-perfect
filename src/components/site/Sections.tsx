@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Reveal } from "./reveal";
 
 function ScrollVideo({
@@ -366,6 +366,52 @@ export function Processo() {
   );
 }
 
+function CountUp({
+  to,
+  from = 0,
+  duration = 1800,
+  suffix = "",
+}: {
+  to: number;
+  from?: number;
+  duration?: number;
+  suffix?: string;
+}) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const [val, setVal] = useState(from);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    let raf = 0;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (!entries[0]?.isIntersecting) return;
+        io.disconnect();
+        const start = performance.now();
+        const tick = (now: number) => {
+          const p = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          setVal(Math.round(from + (to - from) * eased));
+          if (p < 1) raf = requestAnimationFrame(tick);
+        };
+        raf = requestAnimationFrame(tick);
+      },
+      { threshold: 0.3 },
+    );
+    io.observe(el);
+    return () => {
+      io.disconnect();
+      cancelAnimationFrame(raf);
+    };
+  }, [to, from, duration]);
+  return (
+    <span ref={ref}>
+      {val}
+      {suffix}
+    </span>
+  );
+}
+
 const timeline = [
   ["2009", "O início"],
   ["2012", "Primeiros grandes projectos"],
@@ -382,8 +428,8 @@ export function Historia() {
         <div className="grid gap-16 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
             <p className="label-editorial text-ink-muted">A nossa história · Desde 2009</p>
-            <p className="font-display mt-6 text-7xl leading-none tracking-tight md:text-8xl">
-              17+
+            <p className="font-display mt-6 text-7xl leading-none tracking-tight tabular-nums md:text-8xl">
+              <CountUp to={17} suffix="+" />
             </p>
             <p className="text-ink-muted mt-4 max-w-xs text-[15px] leading-relaxed">
               anos a desenhar espaços para viver.
@@ -397,7 +443,9 @@ export function Historia() {
                 delay={i * 90}
                 className="border-hairline flex items-baseline justify-between gap-8 border-b py-5"
               >
-                <span className="font-display text-2xl tracking-tight">{year}</span>
+                <span className="font-display text-2xl tracking-tight tabular-nums">
+                  <CountUp from={2000} to={Number(year)} duration={1400 + i * 150} />
+                </span>
                 <span className="text-ink-muted text-right text-[13px]">{label}</span>
               </Reveal>
             ))}
