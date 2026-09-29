@@ -420,9 +420,9 @@ export function Galeria() {
               <img
                 src={galeriaResidencia}
                 loading="lazy"
-                width={1504}
-                height={912}
-                alt="Sala e zona de refeições de residência privada no Benfica"
+                width={735}
+                height={490}
+                alt="Sala de estar ampla com sofás claros e móvel em madeira na residência privada no Benfica"
                 className="aspect-[16/10] w-full object-cover"
               />
             </div>
@@ -435,9 +435,9 @@ export function Galeria() {
               <img
                 src={galeriaVestir}
                 loading="lazy"
-                width={800}
-                height={1104}
-                alt="Zona de vestir com armário à medida e tampo em pedra"
+                width={736}
+                height={981}
+                alt="Sala de estar com móvel de TV grafite e iluminação embutida no Apartamento Kilamba"
                 className="aspect-[3/4] w-full object-cover"
               />
             </div>
@@ -450,10 +450,10 @@ export function Galeria() {
               <img
                 src={galeriaOffice}
                 loading="lazy"
-                width={1104}
-                height={800}
-                alt="Sala de reuniões com mesa e armários em madeira"
-                className="aspect-[11/8] w-full object-cover"
+                width={474}
+                height={474}
+                alt="Escritório com secretária em carvalho e painel ripado em madeira"
+                className="aspect-square w-full object-cover"
               />
             </div>
             <p className="mt-5 text-[15px] tracking-wide uppercase">Office Concept</p>
