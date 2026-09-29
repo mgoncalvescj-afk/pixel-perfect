@@ -243,17 +243,17 @@ export function ProjectoDestaque() {
               Moradia T5
             </h3>
             <p className="text-ink-muted mt-3 text-[13px]">Talatona · Luanda</p>
-            <p className="mt-8 text-[15px]">Cozinha + Área Social</p>
+            <p className="mt-8 text-[15px]">Sala de Estar</p>
             <p className="text-ink-muted mt-4 max-w-sm text-[14px] leading-relaxed">
-              Um projecto residencial concebido para integrar cozinha e área social através de uma
-              linguagem material contínua, equilibrando madeira natural, superfícies minerais e
-              soluções de armazenamento.
+              Um projecto residencial concebido para integrar sala de estar e zona de refeições
+              através de uma linguagem material contínua, equilibrando madeira natural, superfícies
+              lacadas e soluções de armazenamento.
             </p>
 
             <dl className="mt-8 flex gap-10 text-[13px]">
               <div>
                 <dt className="label-editorial text-ink-muted">Materiais</dt>
-                <dd className="mt-2">Carvalho laminado · Quartzo</dd>
+                <dd className="mt-2">Lacado grafite · Nogueira natural</dd>
               </div>
               <div>
                 <dt className="label-editorial text-ink-muted">Ano</dt>
@@ -273,7 +273,7 @@ export function ProjectoDestaque() {
                 loading="lazy"
                 width={1504}
                 height={1008}
-                alt="Cozinha e área social integradas da Moradia T5 em Talatona"
+                alt="Sala de estar da Moradia T5 em Talatona com móvel de TV lacado grafite e painel em nogueira"
                 className="aspect-[3/2] w-full object-cover"
               />
             </div>
