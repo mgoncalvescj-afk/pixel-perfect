@@ -32,16 +32,16 @@ function ScrollVideo({
     />
   );
 }
-import cozinhas from "@/assets/ambiente-cozinhas.jpg";
-import closets from "@/assets/ambiente-closets.jpg";
-import salas from "@/assets/ambiente-salas.jpg";
-import quartos from "@/assets/ambiente-quartos.jpg";
-import homeoffice from "@/assets/ambiente-homeoffice.jpg";
-import escritorios from "@/assets/ambiente-escritorios.jpg";
-import projectoT5 from "@/assets/projecto-moradia-t5.jpg";
-import galeriaResidencia from "@/assets/galeria-residencia.jpg";
-import galeriaVestir from "@/assets/galeria-vestir.jpg";
-import galeriaOffice from "@/assets/galeria-office.jpg";
+import cozinhas from "@/assets/ambiente-cozinhas.webp";
+import closets from "@/assets/ambiente-closets.webp";
+import salas from "@/assets/ambiente-salas.webp";
+import quartos from "@/assets/ambiente-quartos.webp";
+import homeoffice from "@/assets/ambiente-homeoffice.webp";
+import escritorios from "@/assets/ambiente-escritorios.webp";
+import projectoT5 from "@/assets/projecto-moradia-t5.webp";
+import galeriaResidencia from "@/assets/galeria-residencia.webp";
+import galeriaVestir from "@/assets/galeria-vestir.webp";
+import galeriaOffice from "@/assets/galeria-office.webp";
 
 export function Intro() {
   return (
@@ -120,6 +120,7 @@ export function Ambientes() {
                   <img
                     src={item.image}
                     loading="lazy"
+                decoding="async"
                     width={912}
                     height={1152}
                     alt={item.alt}
@@ -156,6 +157,7 @@ export function MaisAmbientes() {
                 <img
                   src={quartos}
                   loading="lazy"
+                decoding="async"
                   width={1408}
                   height={1008}
                   alt="Quarto com painel de madeira à medida e roupa de cama em linho"
@@ -184,6 +186,7 @@ export function MaisAmbientes() {
                   <img
                     src={homeoffice}
                     loading="lazy"
+                decoding="async"
                     width={912}
                     height={1008}
                     alt="Home office com secretária e estante em carvalho"
@@ -208,6 +211,7 @@ export function MaisAmbientes() {
                   <img
                     src={escritorios}
                     loading="lazy"
+                decoding="async"
                     width={912}
                     height={1008}
                     alt="Recepção de escritório com painel de madeira e balcão em pedra"
@@ -274,6 +278,7 @@ export function ProjectoDestaque() {
               <img
                 src={projectoT5}
                 loading="lazy"
+                decoding="async"
                 width={1504}
                 height={1008}
                 alt="Sala de estar da Moradia T5 em Talatona com móvel de TV lacado grafite e painel em nogueira"
@@ -420,9 +425,10 @@ export function Galeria() {
               <img
                 src={galeriaResidencia}
                 loading="lazy"
-                width={1504}
-                height={912}
-                alt="Sala e zona de refeições de residência privada no Benfica"
+                decoding="async"
+                width={735}
+                height={490}
+                alt="Sala de estar ampla com sofás claros e móvel em madeira na residência privada no Benfica"
                 className="aspect-[16/10] w-full object-cover"
               />
             </div>
@@ -435,9 +441,10 @@ export function Galeria() {
               <img
                 src={galeriaVestir}
                 loading="lazy"
-                width={800}
-                height={1104}
-                alt="Zona de vestir com armário à medida e tampo em pedra"
+                decoding="async"
+                width={736}
+                height={981}
+                alt="Sala de estar com móvel de TV grafite e iluminação embutida no Apartamento Kilamba"
                 className="aspect-[3/4] w-full object-cover"
               />
             </div>
@@ -450,10 +457,11 @@ export function Galeria() {
               <img
                 src={galeriaOffice}
                 loading="lazy"
-                width={1104}
-                height={800}
-                alt="Sala de reuniões com mesa e armários em madeira"
-                className="aspect-[11/8] w-full object-cover"
+                decoding="async"
+                width={474}
+                height={474}
+                alt="Escritório com secretária em carvalho e painel ripado em madeira"
+                className="aspect-square w-full object-cover"
               />
             </div>
             <p className="mt-5 text-[15px] tracking-wide uppercase">Office Concept</p>

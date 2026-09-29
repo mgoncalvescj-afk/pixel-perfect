@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import heroImage from "@/assets/hero-interior.jpg";
+import heroImage from "@/assets/hero-interior.webp";
 
 export function Hero() {
   const [ready, setReady] = useState(false);
@@ -23,6 +23,8 @@ export function Hero() {
           >
             <img
               src={heroImage}
+              fetchPriority="high"
+              decoding="async"
               width={1600}
               height={1104}
               alt="Cozinha planejada MÉBEL em madeira natural com bancada em pedra clara"
